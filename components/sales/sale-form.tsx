@@ -215,7 +215,7 @@ export function SaleForm({ products, customers }: { products: Product[]; custome
                 <SelectContent>
                   {products.map((product) => (
                     <SelectItem key={product.id} value={product.id}>
-                      {product.name} - ${product.unit_price.toFixed(2)} (Stock: {product.stock_quantity})
+                      {product.name} - s/. {product.unit_price.toFixed(2)} (Stock: {product.stock_quantity})
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -254,8 +254,8 @@ export function SaleForm({ products, customers }: { products: Product[]; custome
                       <TableCell className="font-medium">{item.product_name}</TableCell>
                       <TableCell>{item.sku}</TableCell>
                       <TableCell className="text-right">{item.quantity}</TableCell>
-                      <TableCell className="text-right">${item.unit_price.toFixed(2)}</TableCell>
-                      <TableCell className="text-right">${item.subtotal.toFixed(2)}</TableCell>
+                      <TableCell className="text-right">s/. {item.unit_price.toFixed(2)}</TableCell>
+                      <TableCell className="text-right">s/. {item.subtotal.toFixed(2)}</TableCell>
                       <TableCell className="text-right">
                         <Button type="button" variant="outline" size="sm" onClick={() => removeItem(item.product_id)}>
                           Quitar
@@ -267,7 +267,7 @@ export function SaleForm({ products, customers }: { products: Product[]; custome
                     <TableCell colSpan={4} className="text-right font-bold">
                       Total:
                     </TableCell>
-                    <TableCell className="text-right text-xl font-bold">${total.toFixed(2)}</TableCell>
+                    <TableCell className="text-right text-xl font-bold">s/. {total.toFixed(2)}</TableCell>
                     <TableCell />
                   </TableRow>
                 </TableBody>
