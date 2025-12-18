@@ -211,7 +211,7 @@ export function PurchaseOrderForm({ products, suppliers }: { products: Product[]
                 <SelectContent>
                   {products.map((product) => (
                     <SelectItem key={product.id} value={product.id}>
-                      {product.name} - ${product.cost_price.toFixed(2)}
+                      {product.name} - s/. {product.cost_price.toFixed(2)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -250,8 +250,8 @@ export function PurchaseOrderForm({ products, suppliers }: { products: Product[]
                       <TableCell className="font-medium">{item.product_name}</TableCell>
                       <TableCell>{item.sku}</TableCell>
                       <TableCell className="text-right">{item.quantity}</TableCell>
-                      <TableCell className="text-right">${item.unit_cost.toFixed(2)}</TableCell>
-                      <TableCell className="text-right">${item.subtotal.toFixed(2)}</TableCell>
+                      <TableCell className="text-right">s/. {item.unit_cost.toFixed(2)}</TableCell>
+                      <TableCell className="text-right">s/. {item.subtotal.toFixed(2)}</TableCell>
                       <TableCell className="text-right">
                         <Button type="button" variant="outline" size="sm" onClick={() => removeItem(item.product_id)}>
                           Quitar
@@ -263,7 +263,7 @@ export function PurchaseOrderForm({ products, suppliers }: { products: Product[]
                     <TableCell colSpan={4} className="text-right font-bold">
                       Total:
                     </TableCell>
-                    <TableCell className="text-right text-xl font-bold">${total.toFixed(2)}</TableCell>
+                    <TableCell className="text-right text-xl font-bold">s/. {total.toFixed(2)}</TableCell>
                     <TableCell />
                   </TableRow>
                 </TableBody>
