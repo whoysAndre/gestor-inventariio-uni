@@ -155,7 +155,7 @@ export function Sidebar({ user, profile }: { user: User; profile: Profile }) {
             </svg>
           </div>
           <div>
-            <h1 className="text-base font-semibold text-sidebar-foreground">Ferretería Pro</h1>
+            <h1 className="text-base font-semibold text-sidebar-foreground">FerreSoft Manager</h1>
             <p className="text-xs text-sidebar-foreground/60">Sistema de gestión</p>
           </div>
         </div>
