@@ -138,7 +138,7 @@ export default async function SaleDetailPage({
               <div>
                 <p className="text-sm text-slate-600">Total</p>
                 <p className="text-2xl font-bold text-slate-900">
-                  ${sale.total_amount.toFixed(2)}
+                  s/. {sale.total_amount.toFixed(2)}
                 </p>
               </div>
             </CardContent>
@@ -207,10 +207,10 @@ export default async function SaleDetailPage({
                       <TableCell>{item.products?.sku || "-"}</TableCell>
                       <TableCell className="text-right">{item.quantity}</TableCell>
                       <TableCell className="text-right">
-                        ${item.unit_price.toFixed(2)}
+                        s/. {item.unit_price.toFixed(2)}
                       </TableCell>
                       <TableCell className="text-right">
-                        ${item.subtotal.toFixed(2)}
+                        s/. {item.subtotal.toFixed(2)}
                       </TableCell>
                     </TableRow>
                   ))}
